@@ -1,0 +1,30 @@
+matches:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    label: Insert current date, such as 2026-12-31
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+  # Print the current time
+  - trigger: :time
+    replace: "{{mytime}}"
+    label: "Insert current time, such as 12:34:56"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M:%S"
+
+  # My eXalt email (https://www.exalt-company.com/)
+  - trigger: :exalt
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: 'set -a && source "$CONFIG/match/public/.env" && set +a && printf %s "$EXALT_EMAIL"'

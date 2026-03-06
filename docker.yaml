@@ -1,0 +1,15 @@
+# Docker & Docker Compose matches
+
+matches:
+
+  - trigger: ":dup"
+    replace: "docker compose up"
+
+  - trigger: ":ddown"
+    replace: "docker compose down"
+
+  - trigger: ":dlogs"
+    replace: "docker compose logs -ft -n 100"
+
+  - trigger: ":dsh"
+    replace: "docker compose exec $|$ /bin/sh"
