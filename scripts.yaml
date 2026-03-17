@@ -1,0 +1,31 @@
+# Call custom scripts from scripts directory
+
+matches:
+
+  - trigger: ":script"
+    replace: "echo $(espanso path config)/match/public/scripts/burn-pdf.sh"
+    label: "burn-pdf — Flatten PDF via image conversion | <path_to_pdf>"
+
+  - trigger: ":script"
+    replace: "echo $(espanso path config)/match/public/scripts/check-app-install.sh"
+    label: "check-app-install — Check app via Flatpak/Snap/APT | <app_name>"
+
+  - trigger: ":script"
+    replace: "echo $(espanso path config)/match/public/scripts/clear-docker.sh"
+    label: "clear-docker — Stop & remove container + image/volumes/networks | <container> [...]"
+
+  - trigger: ":script"
+    replace: "echo $(espanso path config)/match/public/scripts/delete-merged-local-branches.bash"
+    label: "delete-merged-local-branches — Delete merged local git branches | (no args)"
+
+  - trigger: ":script"
+    replace: "echo $(espanso path config)/match/public/scripts/diffpdf2.sh"
+    label: "diffpdf2 — Visual side-by-side diff of two PDFs | <file1.pdf> <file2.pdf>"
+
+  - trigger: ":script"
+    replace: "echo $(espanso path config)/match/public/scripts/git-branch-divergence.sh"
+    label: "git-branch-divergence — Show ahead/behind all branches vs target | [target_branch]"
+
+  - trigger: ":script"
+    replace: "echo $(espanso path config)/match/public/scripts/password-generator.sh"
+    label: "password-generator — Generate random password | <length>"
