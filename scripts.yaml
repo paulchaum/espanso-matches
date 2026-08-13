@@ -29,3 +29,11 @@ matches:
   - trigger: ":script"
     replace: "$(espanso path config)/match/public/scripts/export-claude-conversation.sh\n"
     label: "export-claude-conversation — Export Claude conversation to markdown"
+
+  - trigger: ":script"
+    replace: "$(espanso path config)/match/public/scripts/search-claude-conversation.py\n"
+    label: "search-claude-conversation — Search Claude conversation for a query"
+
+  - trigger: ":script"
+    replace: "$(espanso path config)/match/public/scripts/cursor-open-files-to-markdown.sh\n"
+    label: "cursor-open-files-to-markdown — Copy Cursor's open files for the current git project as markdown snippets | (no args)"
