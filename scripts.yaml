@@ -27,6 +27,10 @@ matches:
     label: "diffpdf2 — Visual side-by-side diff of two PDFs | <file1.pdf> <file2.pdf>"
 
   - trigger: ":script"
+    replace: "dotenv-diff summary "
+    label: "dotenv-diff — Compare multiple .env files. Usage: dotenv-diff summary <file_1> <file_2>"
+
+  - trigger: ":script"
     replace: "$(espanso path config)/match/public/scripts/export-claude-conversation.sh\n"
     label: "export-claude-conversation — Export Claude conversation to markdown"
 
